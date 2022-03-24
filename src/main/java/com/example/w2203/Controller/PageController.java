@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @Controller
-@RequestMapping("/")
+//@RequestMapping("/")
 public class PageController {
     //登录页面，未设置
 
-    @GetMapping("/i")
+    @RequestMapping("/")
     public String login() {
         return "index";
     }
