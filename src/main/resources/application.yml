@@ -2,7 +2,7 @@
 #数据库配置
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/wpf_db?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://rm-bp12zpk7uiinzhj32so.mysql.rds.aliyuncs.com:3306/wpf_db?characterEncoding=utf8&useSSL=false
     username: wpf
     password: Wpf19810627
     driver-class-name: com.mysql.cj.jdbc.Driver
