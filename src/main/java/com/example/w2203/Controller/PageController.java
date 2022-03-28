@@ -14,7 +14,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/")
+@RequestMapping("/t1")
 @Api(tags = "测试用接口")
 public class PageController {
     @Resource
