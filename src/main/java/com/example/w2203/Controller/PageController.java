@@ -3,9 +3,7 @@ package com.example.w2203.Controller;
 import com.example.w2203.Entity.TestTab;
 import com.example.w2203.Repository.TestRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -21,4 +19,16 @@ public class PageController {
     public List<TestTab> findUserList(){
         return testRepository.findAll();
     }
+
+    @PostMapping(value = "/user")
+
+    public TestTab addUser(@RequestParam("id") String userid, @RequestParam("name") String username){
+
+        TestTab user = new TestTab();
+        user.setUserId(userid);
+        user.setUserName(username);
+        return testRepository.save(user);
+
+    }
 }
+
