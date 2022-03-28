@@ -19,9 +19,13 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update #create
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher #springboot 2.6.3集成swagger3启动失败解决方案
 
 #配置服务器端口
 server:
- port: 8100
+ port: 8800
+
 
 
