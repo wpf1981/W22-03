@@ -3,6 +3,7 @@ package com.example.w2203.Config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
@@ -22,7 +23,7 @@ public class SwaggerConfig {
                 .select()
 //                .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
                 .apis(RequestHandlerSelectors.basePackage("com.example"))
-//                .paths(PathSelectors.any())
+                .paths(PathSelectors.any())
                 .build();
     }
 
